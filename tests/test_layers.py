@@ -5,6 +5,7 @@ from torch.autograd import gradcheck
 from src.layers.linear import LinearFunction
 from src.layers.relu import ReLUFunction
 from src.layers.sigmoid import SigmoidFunction
+from src.layers.dropout import DropoutFunction
 
 
 class TestLayers(unittest.TestCase):
@@ -24,3 +25,9 @@ class TestLayers(unittest.TestCase):
         sigmoid_func = SigmoidFunction.apply
         x = torch.randn(2, 3, requires_grad=True).double()
         self.assertTrue(gradcheck(sigmoid_func, x))
+
+    def test_dropout_autograd(self):
+        drop_func = DropoutFunction.apply
+        x = torch.randn(2, 3, requires_grad=True).double()
+        probability = 0.0
+        self.assertTrue(gradcheck(drop_func, (x, probability)))
