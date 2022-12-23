@@ -7,7 +7,6 @@ from src.layers.relu import ReLUFunction
 from src.layers.sigmoid import SigmoidFunction
 from src.layers.dropout import DropoutFunction
 from src.layers.log_softmax import LogSoftmaxFunction
-from src.criterions.neg_log_likelihood_loss import NLLLossFunction
 
 
 class TestLayers(unittest.TestCase):
@@ -38,9 +37,3 @@ class TestLayers(unittest.TestCase):
         log_softmax_func = LogSoftmaxFunction.apply
         x = torch.randn(2, 3, requires_grad=True).double()
         self.assertTrue(gradcheck(log_softmax_func, x))
-
-    def test_nllloss_autograd(self):
-        neg_log_loss_func = NLLLossFunction.apply
-        x = torch.randn(3, 4, requires_grad=True).double()
-        y = torch.randint(4, (3,))
-        self.assertTrue(gradcheck(neg_log_loss_func, (x, y)))
