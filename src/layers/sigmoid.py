@@ -12,7 +12,7 @@ class SigmoidFunction(torch.autograd.Function):
     @staticmethod
     def forward(ctx: Any, *args: Any, **kwargs: Any) -> Any:
         """
-        Реализация прямого прохода Sigmoid(X) = 1 + (1 - exp(-X), где операция exp
+        Реализация прямого прохода Sigmoid(X) = 1 + (1 - exp(-X)), где операция exp
         применяется поэлементно
         :param ctx: контекст для сохранения производных при прямом обходе
         :param args: аргументы в порядке [X,]
@@ -27,7 +27,7 @@ class SigmoidFunction(torch.autograd.Function):
     @staticmethod
     def backward(ctx: Any, *grad_outputs: Any) -> Any:
         """
-        Обратное распростанение градиента для Sigmoid(X) = 1 + (1 - exp(-X)
+        Обратное распростанение градиента для Sigmoid(X) = 1 + (1 - exp(-X))
 
         dL/dX = dL/dz * dz/dX = dL/dz * sigmoid * (1 - sigmoid), где sigmoid - функция
         сигмоиды от X
