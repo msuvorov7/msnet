@@ -16,3 +16,5 @@
 
 Оптимизаторы:
 - [SGD](./src/optimizers/sgd.py) - метод стохастического градиентного спуска
+- [AdaGrad](./src/optimizers/adagrad.py) - метод AdaGrad
+- [RMSprop](./src/optimizers/rmsprop.py) - метод RMSprop
