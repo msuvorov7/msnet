@@ -14,3 +14,5 @@
 - [NLLLoss](./src/criterions/neg_log_likelihood_loss.py) - Negative Log Likelihood Loss
 - [CrossEntropyLoss](./src/criterions/cross_entropy_loss.py) - CrossEntropyLoss, представленная как LogSoftmax + NLLLoss
 
+Оптимизаторы:
+- [SGD](./src/optimizers/sgd.py) - метод стохастического градиентного спуска
