@@ -13,7 +13,7 @@
 Доступные функции потерь:
 - [NLLLoss](./src/criterions/neg_log_likelihood_loss.py) - Negative Log Likelihood Loss
 - [CrossEntropyLoss](./src/criterions/cross_entropy_loss.py) - CrossEntropyLoss, представленная как LogSoftmax + NLLLoss
-- [FocalLoss](./src/criterions/focal_loss.py) - FocalLoss: $-(1-p)^(gamma) * log(p)$
+- [FocalLoss](./src/criterions/focal_loss.py) - FocalLoss: $-(1-p)^\gamma * log(p)$
 
 Оптимизаторы:
 - [SGD](./src/optimizers/sgd.py) - метод стохастического градиентного спуска
