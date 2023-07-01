@@ -10,6 +10,7 @@
 - [Dropout](./src/layers/dropout.py) - Dropout слой (случайное выбрасывание нейронов)
 - [LogSoftmax](./src/layers/log_softmax.py) - LogSoftmax слой (для многоклассовой классификации)
 - [RNN](./src/layers/rnn.py) - рекуррентный слой (Vanilla RNN)
+- [GRU](./src/layers/gru.py) - рекуррентный слой GRU
 
 Доступные функции потерь:
 - [NLLLoss](./src/criterions/neg_log_likelihood_loss.py) - Negative Log Likelihood Loss
